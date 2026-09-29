@@ -106,5 +106,17 @@
   "it": "negozio",
   "ex": "Das Geschäft öffnet um 9 Uhr. (Il negozio apre alle 9.)",
   "cat": "luoghi"
+ },
+ {
+  "id": "mumnl4al",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "neu",
+  "pl": "neuer, am neuesten",
+  "ipa": "noi",
+  "it": "nuovo",
+  "ex": "Ich habe ein neues Auto.",
+  "cat": "aggettivi"
  }
 ]
