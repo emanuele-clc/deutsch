@@ -418,5 +418,17 @@
   "it": "pagare",
   "ex": "Kann ich mit Karte bezahlen? (Posso pagare con la carta? - Frase vitale!)",
   "cat": "verbi"
+ },
+ {
+  "id": "mumrzu3f",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Sackerl",
+  "pl": "Sackerln",
+  "ipa": "sàk-karl",
+  "it": "sacchetto, busta",
+  "ex": "Brauchen Sie ein Sackerl? (Le serve una busta?)",
+  "cat": "acquisti"
  }
 ]
