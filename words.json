@@ -181,8 +181,8 @@
  },
  {
   "id": "mumnuots",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790774613731,
   "art": "die",
   "de": "Vorlesung",
   "pl": "Vorlesungen",
