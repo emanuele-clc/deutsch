@@ -250,5 +250,17 @@
   "it": "stanza, camera",
   "ex": "Mein Zimmer ist klein, aber schön.",
   "cat": "casa"
+ },
+ {
+  "id": "mumpa7ko",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "programmieren",
+  "pl": "du programmierst, er programmiert, hat programmiert",
+  "ipa": "pro-gram-mìi-ren",
+  "it": "programmare (informatica)",
+  "ex": "Ich lerne an der Uni programmieren. (Imparo a programmare all'università.)",
+  "cat": "verbi"
  }
 ]
