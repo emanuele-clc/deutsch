@@ -286,5 +286,17 @@
   "it": "grazie",
   "ex": "Danke für die Hilfe! (Grazie per l'aiuto!)",
   "cat": "conversazione"
+ },
+ {
+  "id": "mumpf8mn",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "Entschuldigung",
+  "pl": "Entschuldigungen",
+  "ipa": "ent-sciùl-di-gung",
+  "it": "scusa, mi scusi (per attirare l'attenzione o chiedere perdono)",
+  "ex": "Entschuldigung, wo ist der Bahnhof?",
+  "cat": "conversazione"
  }
 ]
