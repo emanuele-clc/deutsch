@@ -1,8 +1,86 @@
 [
- {"id":"a1","art":"das","de":"Haus","pl":"Häuser","ipa":"haus","it":"casa","ex":"Das Haus ist groß.","cat":"casa","box":0,"due":0},
- {"id":"a2","art":"der","de":"Tisch","pl":"Tische","ipa":"tisch","it":"tavolo","ex":"Das Buch liegt auf dem Tisch.","cat":"casa","box":0,"due":0},
- {"id":"a3","art":"die","de":"Frau","pl":"Frauen","ipa":"frau","it":"donna, signora","ex":"Die Frau wohnt in Berlin.","cat":"persone","box":0,"due":0},
- {"id":"a4","art":"","de":"wohnen","pl":"wohnt, hat gewohnt","ipa":"vòonen","it":"abitare","ex":"Ich wohne in Catania.","cat":"verbi","box":0,"due":0},
- {"id":"a5","art":"","de":"heißen","pl":"heißt","ipa":"háissen","it":"chiamarsi","ex":"Wie heißt du?","cat":"verbi","box":0,"due":0},
- {"id":"a6","art":"","de":"danke","pl":"","ipa":"dànke","it":"grazie","ex":"Danke schön!","cat":"frasi","box":0,"due":0}
+ {
+  "id": "a1",
+  "art": "das",
+  "de": "Haus",
+  "pl": "Häuser",
+  "ipa": "haus",
+  "it": "casa",
+  "ex": "Das Haus ist groß.",
+  "cat": "casa",
+  "box": 0,
+  "due": 0
+ },
+ {
+  "id": "a2",
+  "art": "der",
+  "de": "Tisch",
+  "pl": "Tische",
+  "ipa": "tisch",
+  "it": "tavolo",
+  "ex": "Das Buch liegt auf dem Tisch.",
+  "cat": "casa",
+  "box": 0,
+  "due": 0
+ },
+ {
+  "id": "a3",
+  "art": "die",
+  "de": "Frau",
+  "pl": "Frauen",
+  "ipa": "frau",
+  "it": "donna, signora",
+  "ex": "Die Frau wohnt in Berlin.",
+  "cat": "persone",
+  "box": 0,
+  "due": 0
+ },
+ {
+  "id": "a4",
+  "art": "",
+  "de": "wohnen",
+  "pl": "wohnt, hat gewohnt",
+  "ipa": "vòonen",
+  "it": "abitare",
+  "ex": "Ich wohne in Catania.",
+  "cat": "verbi",
+  "box": 0,
+  "due": 0
+ },
+ {
+  "id": "a5",
+  "art": "",
+  "de": "heißen",
+  "pl": "heißt",
+  "ipa": "háissen",
+  "it": "chiamarsi",
+  "ex": "Wie heißt du?",
+  "cat": "verbi",
+  "box": 0,
+  "due": 0
+ },
+ {
+  "id": "a6",
+  "art": "",
+  "de": "danke",
+  "pl": "",
+  "ipa": "dànke",
+  "it": "grazie",
+  "ex": "Danke schön!",
+  "cat": "frasi",
+  "box": 0,
+  "due": 0
+ },
+ {
+  "id": "mumki1yx",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "teuer",
+  "pl": "teurer, am teuersten",
+  "ipa": "toia",
+  "it": "costoso, caro",
+  "ex": "Das Auto ist sehr teuer.",
+  "cat": "aggettivi"
+ }
 ]
