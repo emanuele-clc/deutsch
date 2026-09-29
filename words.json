@@ -382,5 +382,17 @@
   "it": "parlare",
   "ex": "Sprechen Sie Englisch? (Parla inglese? - formale)",
   "cat": "verbi"
+ },
+ {
+  "id": "mumrwux4",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "essen",
+  "pl": "du isst, er isst, hat gegessen",
+  "ipa": "ès-sen",
+  "it": "mangiare",
+  "ex": "Was essen wir heute? (Cosa mangiamo oggi?)",
+  "cat": "verbi"
  }
 ]
