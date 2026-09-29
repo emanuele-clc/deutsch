@@ -202,5 +202,17 @@
   "it": "lezione",
   "ex": "Die Vorlesung in Informatik ist sehr interessant. (La lezione di informatica è molto interessante.)",
   "cat": "studio"
+ },
+ {
+  "id": "mumnw2z2",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "laufen",
+  "pl": "du läufst, er läuft, ist gelaufen",
+  "ipa": "làu-fen",
+  "it": "correre, camminare velocemente",
+  "ex": "Ich gehe nach dem Studium laufen. (Vado a correre dopo lo studio.)",
+  "cat": "verbi"
  }
 ]
