@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1b2433">
+<title>Mein Wörterbuch</title>
+<style>
+:root{--bg:#eef1f5;--fg:#141b26;--card:#fff;--mut:#66707f;--bd:#d8dde5;--ac:#1b2433;--der:#2563eb;--die:#d33a3a;--das:#188a4a}
+@media(prefers-color-scheme:dark){:root{--bg:#10151d;--fg:#e8ecf2;--card:#1a212c;--mut:#93a0b3;--bd:#2c3644;--ac:#e8ecf2;--der:#6b9bff;--die:#ff7a7a;--das:#4cc98a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif;padding-bottom:70px}
+main{max-width:720px;margin:auto;padding:12px}
+h1{font:600 22px Georgia,serif;margin:8px 0 2px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--bd);z-index:5}
+nav button{flex:1;border:0;background:none;color:var(--mut);padding:12px 2px;font:inherit;font-size:13px}
+nav button.on{color:var(--fg);font-weight:700;box-shadow:inset 0 3px var(--fg)}
+input,select,textarea,button{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);margin:3px 0}
+.btn{border:1px solid var(--bd);background:var(--card);border-radius:8px;padding:8px 14px;cursor:pointer}
+.btn.p{background:var(--ac);color:var(--bg);border-color:var(--ac)}
+.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}.row>.btn{flex:none}
+.w{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;margin:8px 0;display:flex;gap:10px}
+.w>div{flex:1}.de{font:600 20px Georgia,serif}
+.art{font:700 13px system-ui;margin-right:6px}
+.der{color:var(--der)}.die{color:var(--die)}.das{color:var(--das)}
+.ipa,.mut{color:var(--mut);font-size:14px}.ex{font-style:italic;color:var(--mut);font-size:14px}
+.ic{border:0;background:none;font-size:20px;cursor:pointer;padding:4px}
+.tag{font-size:12px;border:1px solid var(--bd);border-radius:20px;padding:0 8px;color:var(--mut)}
+.fc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:36px 16px;text-align:center;min-height:230px;margin:14px 0;cursor:pointer}
+.fc .de{font-size:34px}.hide{display:none}
+#st{font-size:13px;color:var(--mut)}
+dialog{border:1px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--fg);width:min(94vw,460px)}
+table{border-collapse:collapse;width:100%;margin:6px 0;font-size:14px}td,th{border:1px solid var(--bd);padding:5px 7px;text-align:left}
+details{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin:8px 0}summary{font-weight:600;cursor:pointer}
+</style></head><body><main>
+<h1>Mein Wörterbuch</h1><div id="st"></div>
+
+<section id="v-dict">
+ <div class="row"><input id="q" type="search" placeholder="Cerca in tedesco, italiano, esempi…"><select id="fc" style="max-width:130px"></select></div>
+ <div class="row" style="margin:6px 0"><span class="mut" id="cnt"></span><button class="btn p" id="add">+ Nuova parola</button></div>
+ <div id="list"></div>
+</section>
+
+<section id="v-rev" class="hide">
+ <div class="row"><span id="due" class="mut"></span><button class="btn" id="dir">DE → IT</button></div>
+ <div class="fc" id="card"></div>
+ <div class="row hide" id="grade"><button class="btn" data-g="0">Non la so</button><button class="btn" data-g="1">Quasi</button><button class="btn p" data-g="2">La so</button></div>
+</section>
+
+<section id="v-gram" class="hide">
+<details open><summary>Genere e colori</summary><p>Impara sempre la parola <b>con l'articolo</b>: <b class="der">der</b> maschile, <b class="die">die</b> femminile, <b class="das">das</b> neutro. <b class="die">die</b> è anche il plurale di tutti.</p></details>
+<details><summary>Articoli nei 4 casi</summary><table><tr><th></th><th>m</th><th>f</th><th>n</th><th>pl</th></tr><tr><td>Nom</td><td>der</td><td>die</td><td>das</td><td>die</td></tr><tr><td>Akk</td><td>den</td><td>die</td><td>das</td><td>die</td></tr><tr><td>Dat</td><td>dem</td><td>der</td><td>dem</td><td>den(+n)</td></tr><tr><td>Gen</td><td>des(+s)</td><td>der</td><td>des(+s)</td><td>der</td></tr></table><p class="mut">Nom = chi fa l'azione · Akk = oggetto diretto · Dat = a chi · Gen = di chi.</p></details>
+<details><summary>sein e haben</summary><table><tr><th></th><th>sein</th><th>haben</th></tr><tr><td>ich</td><td>bin</td><td>habe</td></tr><tr><td>du</td><td>bist</td><td>hast</td></tr><tr><td>er/sie/es</td><td>ist</td><td>hat</td></tr><tr><td>wir</td><td>sind</td><td>haben</td></tr><tr><td>ihr</td><td>seid</td><td>habt</td></tr><tr><td>sie/Sie</td><td>sind</td><td>haben</td></tr></table></details>
+<details><summary>Ordine delle parole</summary><p>Il verbo coniugato è sempre in <b>2ª posizione</b> nella frase principale: <i>Heute gehe ich nach Hause.</i> Nella subordinata (weil, dass, wenn) va <b>in fondo</b>: <i>…weil ich müde bin.</i> Con verbi modali l'infinito va in fondo: <i>Ich kann heute kommen.</i></p></details>
+<details><summary>Pronuncia</summary><table><tr><td>ei</td><td>"ai" (nein)</td></tr><tr><td>ie</td><td>"i" lunga (Liebe)</td></tr><tr><td>eu / äu</td><td>"oi" (heute)</td></tr><tr><td>w</td><td>"v" (Wasser)</td></tr><tr><td>v</td><td>di solito "f" (Vater)</td></tr><tr><td>z</td><td>"ts" (Zeit)</td></tr><tr><td>s + vocale</td><td>"z" dolce (Sonne)</td></tr><tr><td>sch / sp- / st-</td><td>"sc" (Schule, sprechen, Stein)</td></tr><tr><td>ch</td><td>dopo a/o/u gutturale (Buch), altrimenti soffiata (ich)</td></tr><tr><td>ä ö ü</td><td>e aperta · o con labbra a "e" · u con labbra a "i"</td></tr><tr><td>ß</td><td>"ss" dopo vocale lunga</td></tr></table></details>
+<details><summary>Trucchi per imparare</summary><p>Ripassa poco ma ogni giorno (5-10 min). Metti sempre una frase d'esempio: il contesto fissa la parola. Prova anche la direzione IT → DE: è la più difficile ed è quella che serve per parlare. Ascolta la pronuncia col tasto 🔊 e ripetila ad alta voce.</p></details>
+</section>
+
+<section id="v-set" class="hide">
+ <p><b>Sincronizzazione</b><br><span class="mut">Per salvare sul repo GitHub da qualsiasi dispositivo, incolla qui un token (vedi guida). Senza token il sito è in sola lettura + salvataggio locale.</span></p>
+ <input id="tok" type="password" placeholder="github_pat_…" autocomplete="off">
+ <div class="row" style="margin:6px 0"><button class="btn p" id="stok">Salva token</button><button class="btn" id="sync">Sincronizza ora</button></div>
+ <p><b>Backup</b></p>
+ <div class="row"><button class="btn" id="exp">Esporta JSON</button><button class="btn" id="imp">Importa JSON</button></div>
+ <input type="file" id="file" accept=".json" class="hide">
+</section>
+
+<dialog id="dlg"><form method="dialog" id="f">
+ <b id="dt">Nuova parola</b>
+ <div class="row"><select id="fa"><option value="">–</option><option>der</option><option>die</option><option>das</option></select><input id="fde" placeholder="Parola (Haus)" required style="flex:3"></div>
+ <input id="fpl" placeholder="Plurale / forme verbali (Häuser)">
+ <input id="fipa" placeholder="Pronuncia (haus)">
+ <input id="fit" placeholder="Traduzione italiana" required>
+ <input id="fex" placeholder="Frase d'esempio">
+ <input id="fcat" list="cats" placeholder="Categoria (casa, cibo, verbi…)"><datalist id="cats"></datalist>
+ <div class="row" style="margin-top:8px"><button class="btn p" value="ok">Salva</button><button class="btn" value="x" formnovalidate>Annulla</button><button class="btn" type="button" id="del">Elimina</button></div>
+</form></dialog>
+
+<nav><button data-v="dict" class="on">📖<br>Parole</button><button data-v="rev">🔁<br>Ripasso</button><button data-v="gram">💡<br>Grammatica</button><button data-v="set">⚙️<br>Sync</button></nav>
+</main>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const owner=location.hostname.endsWith('github.io')?location.hostname.split('.')[0]:'',repo=location.pathname.split('/')[1]||'';
+const API=`https://api.github.com/repos/${owner}/${repo}/contents/words.json`;
+const H=()=>({Authorization:'Bearer '+tok,Accept:'application/vnd.github+json'});
+const DAY=864e5,INT=[0,1,3,7,16,35,90];
+let W=[],sha=null,tok=localStorage.tok||'',editing=null,cur=null,rev=false,timer;
+const st=t=>$('#st').textContent=t;
+const cache=()=>localStorage.w=JSON.stringify(W);
+const dec=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));
+const enc=s=>{let b='';new TextEncoder().encode(s).forEach(c=>b+=String.fromCharCode(c));return btoa(b)};
+
+async function load(){
+ if(localStorage.dirty&&localStorage.w){W=JSON.parse(localStorage.w);render();push();return}
+ try{
+  if(tok&&owner){const r=await fetch(API,{headers:H()});if(r.ok){const j=await r.json();sha=j.sha;W=JSON.parse(dec(j.content));cache();st('Sincronizzato ✓');render();return}}
+  W=await (await fetch('words.json?'+Date.now())).json();cache();st(tok?'Token non valido?':'Sola lettura (imposta il token per salvare)')
+ }catch(e){W=JSON.parse(localStorage.w||'[]');st('Offline: uso la copia locale')}
+ render()
+}
+function changed(){cache();localStorage.dirty=1;render();clearTimeout(timer);timer=setTimeout(push,1200);st('Salvataggio…')}
+async function push(retry){
+ if(!tok||!owner){st('Salvato solo su questo dispositivo');return}
+ try{
+  if(!sha){const g=await fetch(API,{headers:H()});if(g.ok)sha=(await g.json()).sha}
+  const r=await fetch(API,{method:'PUT',headers:H(),body:JSON.stringify({message:'Aggiorna parole',content:enc(JSON.stringify(W,null,1)),sha})});
+  if(r.ok){sha=(await r.json()).content.sha;localStorage.removeItem('dirty');st('Sincronizzato ✓')}
+  else if(!retry){sha=null;return push(true)}else st('Errore sync ('+r.status+'): controlla il token')
+ }catch(e){st('Offline: salvato in locale, sincronizzo dopo')}
+}
+
+function speak(t){const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}
+const full=w=>(w.art?w.art+' ':'')+w.de;
+function render(){
+ const cats=[...new Set(W.map(w=>w.cat).filter(Boolean))].sort();
+ const sel=$('#fc').value;$('#fc').innerHTML='<option value="">Tutte</option>'+cats.map(c=>`<option ${c==sel?'selected':''}>${esc(c)}</option>`).join('');
+ $('#cats').innerHTML=cats.map(c=>`<option value="${esc(c)}">`).join('');
+ const q=$('#q').value.toLowerCase().trim();
+ const L=W.filter(w=>(!sel||w.cat==sel)&&(!q||[w.de,w.it,w.ex,w.pl,w.cat].join(' ').toLowerCase().includes(q))).sort((a,b)=>a.de.localeCompare(b.de,'de'));
+ $('#cnt').textContent=L.length+' / '+W.length+' parole';
+ $('#list').innerHTML=L.map(w=>`<div class="w"><div><span class="art ${w.art}">${w.art||''}</span><span class="de">${esc(w.de)}</span> ${w.pl?`<span class="mut">· ${esc(w.pl)}</span>`:''}<br><span class="ipa">[${esc(w.ipa)}]</span> — ${esc(w.it)}${w.ex?`<br><span class="ex">${esc(w.ex)}</span>`:''}${w.cat?`<br><span class="tag">${esc(w.cat)}</span>`:''}</div><div><button class="ic" data-s="${w.id}">🔊</button><button class="ic" data-e="${w.id}">✏️</button></div></div>`).join('')||'<p class="mut">Nessuna parola. Aggiungine una con “+ Nuova parola”.</p>';
+ nextCard()
+}
+function nextCard(){
+ const d=W.filter(w=>(w.due||0)<=Date.now());
+ $('#due').textContent=d.length+' da ripassare';
+ cur=d.length?d[Math.floor(Math.random()*d.length)]:null;
+ $('#grade').classList.add('hide');
+ $('#card').innerHTML=cur?`<div class="de">${esc(rev?cur.it:full(cur))}</div>${rev?'':`<div class="ipa">[${esc(cur.ipa)}]</div>`}<p class="mut">tocca per girare</p>`:'<p>🎉 Tutto ripassato per oggi!</p>';
+}
+$('#card').onclick=()=>{if(!cur)return;$('#grade').classList.remove('hide');
+ $('#card').innerHTML=`<div class="de">${esc(rev?full(cur):cur.it)}</div><div class="ipa">[${esc(cur.ipa)}]</div>${cur.ex?`<p class="ex">${esc(cur.ex)}</p>`:''}`;speak(full(cur))};
+$('#grade').onclick=e=>{const g=e.target.dataset.g;if(g==null||!cur)return;
+ cur.box=g==0?0:Math.min((cur.box||0)+(g==2?1:0),6);cur.due=Date.now()+(g==1?DAY/2:INT[cur.box]*DAY||600000);changed()};
+$('#dir').onclick=()=>{rev=!rev;$('#dir').textContent=rev?'IT → DE':'DE → IT';nextCard()};
+
+$('#list').onclick=e=>{const s=e.target.dataset.s,d=e.target.dataset.e;
+ if(s)speak(full(W.find(w=>w.id==s)));if(d)openForm(W.find(w=>w.id==d))};
+function openForm(w){editing=w||null;$('#dt').textContent=w?'Modifica':'Nuova parola';$('#del').style.display=w?'':'none';
+ [['fa','art'],['fde','de'],['fpl','pl'],['fipa','ipa'],['fit','it'],['fex','ex'],['fcat','cat']].forEach(([i,k])=>$('#'+i).value=w?w[k]||'':'');$('#dlg').showModal()}
+$('#add').onclick=()=>openForm();
+$('#f').onsubmit=e=>{if(e.submitter.value!='ok')return;
+ const o={art:$('#fa').value,de:$('#fde').value.trim(),pl:$('#fpl').value.trim(),ipa:$('#fipa').value.trim(),it:$('#fit').value.trim(),ex:$('#fex').value.trim(),cat:$('#fcat').value.trim()};
+ if(editing)Object.assign(editing,o);else W.push({id:Date.now().toString(36),box:0,due:0,...o});changed()};
+$('#del').onclick=()=>{if(confirm('Eliminare questa parola?')){W=W.filter(w=>w!==editing);$('#dlg').close();changed()}};
+$('#q').oninput=$('#fc').onchange=render;
+
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x==b));
+ ['dict','rev','gram','set'].forEach(v=>$('#v-'+v).classList.toggle('hide',v!=b.dataset.v))});
+$('#tok').value=tok;
+$('#stok').onclick=()=>{tok=$('#tok').value.trim();localStorage.tok=tok;sha=null;load()};
+$('#sync').onclick=()=>{localStorage.removeItem('dirty');load()};
+$('#exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(W,null,1)]));a.download='words.json';a.click()};
+$('#imp').onclick=()=>$('#file').click();
+$('#file').onchange=async e=>{try{W=JSON.parse(await e.target.files[0].text());changed()}catch(x){alert('File non valido')}};
+load();
+</script></body></html>
