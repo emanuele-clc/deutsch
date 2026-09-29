@@ -229,8 +229,8 @@
  },
  {
   "id": "mump9dkz",
-  "box": 1,
-  "due": 1790774584049,
+  "box": 0,
+  "due": 1790695341603,
   "art": "das",
   "de": "Zimmer",
   "pl": "Zimmer",
@@ -398,7 +398,7 @@
  {
   "id": "mumry11h",
   "box": 0,
-  "due": 0,
+  "due": 1790695385136,
   "art": "die",
   "de": "Prüfung",
   "pl": "Prüfungen",
