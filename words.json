@@ -20,8 +20,8 @@
   "it": "tavolo",
   "ex": "Das Buch liegt auf dem Tisch.",
   "cat": "casa",
-  "box": 0,
-  "due": 1790689193305
+  "box": 1,
+  "due": 1790799028525
  },
  {
   "id": "a3",
@@ -385,8 +385,8 @@
  },
  {
   "id": "mumrwux4",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790799031812,
   "art": "",
   "de": "essen",
   "pl": "du isst, er isst, hat gegessen",
@@ -410,7 +410,7 @@
  {
   "id": "mumrysjk",
   "box": 0,
-  "due": 0,
+  "due": 1790713235933,
   "art": "",
   "de": "bezahlen",
   "pl": "du bezahlst, er bezahlt, hat bezahlt",
