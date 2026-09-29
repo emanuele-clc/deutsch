@@ -322,5 +322,17 @@
   "it": "chi",
   "ex": "Wer ist das? (Chi è quello?)",
   "cat": "domande"
+ },
+ {
+  "id": "mumpkmsh",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "was",
+  "pl": "",
+  "ipa": "vas",
+  "it": "cosa",
+  "ex": "Was ist das? (Cos'è questo?)",
+  "cat": "domande"
  }
 ]
