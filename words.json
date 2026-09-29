@@ -190,5 +190,17 @@
   "it": "piccante, affilato",
   "ex": "Diese Chilischote ist extrem scharf. (Questo peperoncino è estremamente piccante.)",
   "cat": "aggettivi"
+ },
+ {
+  "id": "mumnuots",
+  "box": 0,
+  "due": 0,
+  "art": "die",
+  "de": "Vorlesung",
+  "pl": "Vorlesungen",
+  "ipa": "fòr-le-zung",
+  "it": "lezione",
+  "ex": "Die Vorlesung in Informatik ist sehr interessant. (La lezione di informatica è molto interessante.)",
+  "cat": "studio"
  }
 ]
