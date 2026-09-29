@@ -229,8 +229,8 @@
  },
  {
   "id": "mump9dkz",
-  "box": 0,
-  "due": 1790695341603,
+  "box": 1,
+  "due": 1790799081531,
   "art": "das",
   "de": "Zimmer",
   "pl": "Zimmer",
@@ -398,7 +398,7 @@
  {
   "id": "mumry11h",
   "box": 0,
-  "due": 1790695385136,
+  "due": 1790713278559,
   "art": "die",
   "de": "Prüfung",
   "pl": "Prüfungen",
@@ -421,8 +421,8 @@
  },
  {
   "id": "mumrzu3f",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790799073325,
   "art": "das",
   "de": "Sackerl",
   "pl": "Sackerln",
