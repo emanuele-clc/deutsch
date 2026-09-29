@@ -334,5 +334,17 @@
   "it": "cosa",
   "ex": "Was ist das? (Cos'è questo?)",
   "cat": "domande"
+ },
+ {
+  "id": "mumpl1y1",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "wo",
+  "pl": "",
+  "ipa": "vo",
+  "it": "dove",
+  "ex": "Wo ist die Mensa? (Dov'è la mensa universitaria?)",
+  "cat": "domande"
  }
 ]
