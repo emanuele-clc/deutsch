@@ -118,5 +118,17 @@
   "it": "nuovo",
   "ex": "Ich habe ein neues Auto.",
   "cat": "aggettivi"
+ },
+ {
+  "id": "mumnmklz",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "alt",
+  "pl": "älter, am ältesten",
+  "ipa": "alt",
+  "it": "vecchio, antico",
+  "ex": "Mein Laptop ist sehr alt.",
+  "cat": "aggettivi"
  }
 ]
