@@ -214,5 +214,17 @@
   "it": "correre, camminare velocemente",
   "ex": "Ich gehe nach dem Studium laufen. (Vado a correre dopo lo studio.)",
   "cat": "verbi"
+ },
+ {
+  "id": "mump7ivu",
+  "box": 0,
+  "due": 0,
+  "art": "der",
+  "de": "Supermarkt",
+  "pl": "Supermärkte",
+  "ipa": "zù-per-markt",
+  "it": "supermercato",
+  "ex": "Wo ist der Supermarkt?",
+  "cat": "luoghi"
  }
 ]
