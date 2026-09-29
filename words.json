@@ -142,5 +142,17 @@
   "it": "compleanno",
   "ex": "Alles Gute zum Geburtstag! (Buon compleanno!) oppure Wann hast du Geburtstag? (Quando è il tuo compleanno?)",
   "cat": "eventi"
+ },
+ {
+  "id": "mumnp9va",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "heute",
+  "pl": "",
+  "ipa": "hòi-te",
+  "it": "oggi",
+  "ex": "Heute habe ich viel zu tun. (Oggi ho molto da fare.)",
+  "cat": "avverbi"
  }
 ]
