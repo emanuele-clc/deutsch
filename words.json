@@ -178,5 +178,17 @@
   "it": "meraviglioso, stupendo",
   "ex": "meraviglioso, stupendo",
   "cat": "aggettivi"
+ },
+ {
+  "id": "mumntmki",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "scharf",
+  "pl": "schärfer, am schärfsten",
+  "ipa": "sciàrf",
+  "it": "piccante, affilato",
+  "ex": "Diese Chilischote ist extrem scharf. (Questo peperoncino è estremamente piccante.)",
+  "cat": "aggettivi"
  }
 ]
