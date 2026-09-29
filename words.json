@@ -358,5 +358,17 @@
   "it": "quando",
   "ex": "Wann beginnt die Vorlesung? (Quando inizia la lezione?)",
   "cat": "domande"
+ },
+ {
+  "id": "mumpmb0x",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "verstehen",
+  "pl": "du verstehst, er versteht, hat verstanden",
+  "ipa": "fer-stée-en",
+  "it": "capire",
+  "ex": "Tut mir leid, ich verstehe nicht. (Mi dispiace, non capisco.)",
+  "cat": "verbi"
  }
 ]
