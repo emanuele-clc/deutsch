@@ -406,5 +406,17 @@
   "it": "esame",
   "ex": "Die Prüfung in Informatik ist schwer. (L'esame di informatica è difficile.)",
   "cat": "studio"
+ },
+ {
+  "id": "mumrysjk",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "bezahlen",
+  "pl": "du bezahlst, er bezahlt, hat bezahlt",
+  "ipa": "be-tsàa-len",
+  "it": "pagare",
+  "ex": "Kann ich mit Karte bezahlen? (Posso pagare con la carta? - Frase vitale!)",
+  "cat": "verbi"
  }
 ]
