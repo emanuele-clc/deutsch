@@ -286,5 +286,17 @@
   "it": "ciao, salve",
   "ex": "Servus! Wie geht's? (Ciao! Come va?)",
   "cat": "saluti"
+ },
+ {
+  "id": "mumpdsiv",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "Danke",
+  "pl": "",
+  "ipa": "dàn-che",
+  "it": "grazie",
+  "ex": "Danke für die Hilfe! (Grazie per l'aiuto!)",
+  "cat": "conversazione"
  }
 ]
