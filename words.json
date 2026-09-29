@@ -130,5 +130,17 @@
   "it": "vecchio, antico",
   "ex": "Mein Laptop ist sehr alt.",
   "cat": "aggettivi"
+ },
+ {
+  "id": "mumno6w3",
+  "box": 0,
+  "due": 0,
+  "art": "der",
+  "de": "Geburtstag",
+  "pl": "Geburtstage",
+  "ipa": "ghe-bùrts-taak",
+  "it": "compleanno",
+  "ex": "Alles Gute zum Geburtstag! (Buon compleanno!) oppure Wann hast du Geburtstag? (Quando è il tuo compleanno?)",
+  "cat": "eventi"
  }
 ]
