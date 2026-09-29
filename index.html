@@ -32,7 +32,7 @@ dialog{border:1px solid var(--bd);border-radius:14px;background:var(--bg);color:
 table{border-collapse:collapse;width:100%;margin:6px 0;font-size:14px}td,th{border:1px solid var(--bd);padding:5px 7px;text-align:left}
 details{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin:8px 0}summary{font-weight:600;cursor:pointer}
 </style></head><body><main>
-<h1>Mein Wörterbuch</h1><div id="st"></div>
+<div class="row" style="margin-top:8px"><h1 style="flex:1">Mein Wörterbuch</h1><button class="btn p" id="save">💾 Salva tutto</button></div><div id="st"></div>
 
 <section id="v-dict">
  <div class="row"><input id="q" type="search" placeholder="Cerca in tedesco, italiano, esempi…"><select id="fc" style="max-width:130px"></select></div>
@@ -89,25 +89,27 @@ const cache=()=>localStorage.w=JSON.stringify(W);
 const dec=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));
 const enc=s=>{let b='';new TextEncoder().encode(s).forEach(c=>b+=String.fromCharCode(c));return btoa(b)};
 
+async function remote(){const r=await fetch(API,{headers:H()});if(r.status==404)return{L:[],sha:null};if(!r.ok)throw r.status;const j=await r.json();return{L:JSON.parse(dec(j.content)),sha:j.sha}}
+function merge(R){const del=JSON.parse(localStorage.del||'[]'),ids=new Set(W.map(w=>w.id));R.forEach(w=>{if(!ids.has(w.id)&&!del.includes(w.id))W.push(w)})}
 async function load(){
- if(localStorage.dirty&&localStorage.w){W=JSON.parse(localStorage.w);render();push();return}
- try{
-  if(tok&&owner){const r=await fetch(API,{headers:H()});if(r.ok){const j=await r.json();sha=j.sha;W=JSON.parse(dec(j.content));cache();st('Sincronizzato ✓');render();return}}
-  W=await (await fetch('words.json?'+Date.now())).json();cache();st(tok?'Token non valido?':'Sola lettura (imposta il token per salvare)')
- }catch(e){W=JSON.parse(localStorage.w||'[]');st('Offline: uso la copia locale')}
+ if(localStorage.dirty&&localStorage.w){W=JSON.parse(localStorage.w);render();await push();return}
+ if(tok&&owner){try{const R=await remote();W=R.L;sha=R.sha;cache();st('Sincronizzato ✓');render();return}catch(e){st('Token non valido o senza permessi ('+e+')')}}
+ try{W=await(await fetch('words.json?'+Date.now())).json();cache()}catch(e){W=JSON.parse(localStorage.w||'[]')}
  render()
 }
-function changed(){cache();localStorage.dirty=1;render();clearTimeout(timer);timer=setTimeout(push,1200);st('Salvataggio…')}
-async function push(retry){
- if(!tok||!owner){st('Salvato solo su questo dispositivo');return}
- try{
-  if(!sha){const g=await fetch(API,{headers:H()});if(g.ok)sha=(await g.json()).sha}
-  const r=await fetch(API,{method:'PUT',headers:H(),body:JSON.stringify({message:'Aggiorna parole',content:enc(JSON.stringify(W,null,1)),sha})});
-  if(r.ok){sha=(await r.json()).content.sha;localStorage.removeItem('dirty');st('Sincronizzato ✓')}
-  else if(!retry){sha=null;return push(true)}else st('Errore sync ('+r.status+'): controlla il token')
- }catch(e){st('Offline: salvato in locale, sincronizzo dopo')}
+function changed(){cache();localStorage.dirty=1;render();clearTimeout(timer);timer=setTimeout(push,1500);st('Modifiche non ancora salvate…')}
+async function push(){
+ clearTimeout(timer);
+ if(!tok||!owner){st('Salvato solo su questo dispositivo (manca il token)');return false}
+ st('Salvataggio…');
+ for(let i=0;i<2;i++){try{
+  const R=await remote();merge(R.L);
+  const r=await fetch(API,{method:'PUT',headers:H(),body:JSON.stringify({message:'Aggiorna parole',content:enc(JSON.stringify(W,null,1)),sha:R.sha||undefined})});
+  if(r.ok){sha=(await r.json()).content.sha;localStorage.removeItem('dirty');localStorage.removeItem('del');cache();render();st('Salvato e sincronizzato ✓');return true}
+  if(r.status!=409&&r.status!=422){st('Errore '+r.status+': controlla il token (Contents: Read and write sul repo deutsch)');return false}
+ }catch(e){st(typeof e=='number'?'Token non valido o senza permessi ('+e+')':'Offline: salvato in locale, riprova dopo');return false}}
+ st('Conflitto, riprova');return false
 }
-
 function speak(t){const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}
 const full=w=>(w.art?w.art+' ':'')+w.de;
 function render(){
@@ -141,7 +143,7 @@ $('#add').onclick=()=>openForm();
 $('#f').onsubmit=e=>{if(e.submitter.value!='ok')return;
  const o={art:$('#fa').value,de:$('#fde').value.trim(),pl:$('#fpl').value.trim(),ipa:$('#fipa').value.trim(),it:$('#fit').value.trim(),ex:$('#fex').value.trim(),cat:$('#fcat').value.trim()};
  if(editing)Object.assign(editing,o);else W.push({id:Date.now().toString(36),box:0,due:0,...o});changed()};
-$('#del').onclick=()=>{if(confirm('Eliminare questa parola?')){W=W.filter(w=>w!==editing);$('#dlg').close();changed()}};
+$('#del').onclick=()=>{if(confirm('Eliminare questa parola?')){localStorage.del=JSON.stringify([...JSON.parse(localStorage.del||'[]'),editing.id]);W=W.filter(w=>w!==editing);$('#dlg').close();changed()}};
 $('#q').oninput=$('#fc').onchange=render;
 
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
@@ -149,7 +151,8 @@ document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
  ['dict','rev','gram','set'].forEach(v=>$('#v-'+v).classList.toggle('hide',v!=b.dataset.v))});
 $('#tok').value=tok;
 $('#stok').onclick=()=>{tok=$('#tok').value.trim();localStorage.tok=tok;sha=null;load()};
-$('#sync').onclick=()=>{localStorage.removeItem('dirty');load()};
+$('#sync').onclick=async()=>{if(localStorage.dirty&&!await push())return;await load()};
+$('#save').onclick=push;
 $('#exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(W,null,1)]));a.download='words.json';a.click()};
 $('#imp').onclick=()=>$('#file').click();
 $('#file').onchange=async e=>{try{W=JSON.parse(await e.target.files[0].text());changed()}catch(x){alert('File non valido')}};
