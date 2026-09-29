@@ -370,5 +370,17 @@
   "it": "capire",
   "ex": "Tut mir leid, ich verstehe nicht. (Mi dispiace, non capisco.)",
   "cat": "verbi"
+ },
+ {
+  "id": "mumpn00o",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "sprechen",
+  "pl": "du sprichst, er spricht, hat gesprochen",
+  "ipa": "sprè-chen",
+  "it": "parlare",
+  "ex": "Sprechen Sie Englisch? (Parla inglese? - formale)",
+  "cat": "verbi"
  }
 ]
