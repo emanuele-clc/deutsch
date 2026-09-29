@@ -226,5 +226,17 @@
   "it": "supermercato",
   "ex": "Wo ist der Supermarkt?",
   "cat": "luoghi"
+ },
+ {
+  "id": "mump8f7x",
+  "box": 0,
+  "due": 0,
+  "art": "der",
+  "de": "Bahnhof",
+  "pl": "Bahnhöfe",
+  "ipa": "bàan-hoof",
+  "it": "stazione ferroviaria",
+  "ex": "Ich gehe zum Bahnhof. (Vado in stazione.)",
+  "cat": "luoghi"
  }
 ]
