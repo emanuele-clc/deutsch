@@ -82,5 +82,17 @@
   "it": "costoso, caro",
   "ex": "Das Auto ist sehr teuer.",
   "cat": "aggettivi"
+ },
+ {
+  "id": "mumnhd28",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "billig",
+  "pl": "billiger, am billigsten",
+  "ipa": "billich",
+  "it": "economico, a buon mercato",
+  "ex": "Das Ticket ist sehr billig.",
+  "cat": "aggettivi"
  }
 ]
