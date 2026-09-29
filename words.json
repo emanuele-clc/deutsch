@@ -44,8 +44,8 @@
   "it": "abitare",
   "ex": "Ich wohne in Catania.",
   "cat": "verbi",
-  "box": 1,
-  "due": 1790774592815
+  "box": 0,
+  "due": 0
  },
  {
   "id": "a5",
@@ -121,8 +121,8 @@
  },
  {
   "id": "mumno6w3",
-  "box": 1,
-  "due": 1790774641603,
+  "box": 0,
+  "due": 0,
   "art": "der",
   "de": "Geburtstag",
   "pl": "Geburtstage",
@@ -134,7 +134,7 @@
  {
   "id": "mumnp9va",
   "box": 0,
-  "due": 1790731425352,
+  "due": 0,
   "art": "",
   "de": "heute",
   "pl": "",
@@ -145,8 +145,8 @@
  },
  {
   "id": "mumnq8lu",
-  "box": 1,
-  "due": 1790774543165,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "morgen",
   "pl": "",
@@ -169,8 +169,8 @@
  },
  {
   "id": "mumntmki",
-  "box": 1,
-  "due": 1790774551103,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "scharf",
   "pl": "schärfer, am schärfsten",
@@ -181,8 +181,8 @@
  },
  {
   "id": "mumnuots",
-  "box": 1,
-  "due": 1790774613731,
+  "box": 0,
+  "due": 0,
   "art": "die",
   "de": "Vorlesung",
   "pl": "Vorlesungen",
@@ -193,8 +193,8 @@
  },
  {
   "id": "mumnw2z2",
-  "box": 1,
-  "due": 1790774560697,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "laufen",
   "pl": "du läufst, er läuft, ist gelaufen",
@@ -229,8 +229,8 @@
  },
  {
   "id": "mump9dkz",
-  "box": 1,
-  "due": 1790774584049,
+  "box": 0,
+  "due": 0,
   "art": "das",
   "de": "Zimmer",
   "pl": "Zimmer",
@@ -241,8 +241,8 @@
  },
  {
   "id": "mumpa7ko",
-  "box": 1,
-  "due": 1790774590623,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "programmieren",
   "pl": "du programmierst, er programmiert, hat programmiert",
@@ -265,8 +265,8 @@
  },
  {
   "id": "mumpd7s7",
-  "box": 1,
-  "due": 1790774574703,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "Servus",
   "pl": "sèr-vus",
@@ -289,8 +289,8 @@
  },
  {
   "id": "mumpf8mn",
-  "box": 1,
-  "due": 1790774603488,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "Entschuldigung",
   "pl": "Entschuldigungen",
@@ -301,8 +301,8 @@
  },
  {
   "id": "mumpg4vs",
-  "box": 1,
-  "due": 1790774572135,
+  "box": 0,
+  "due": 0,
   "art": "",
   "de": "heißen",
   "pl": "ich heiße, du heißt, er heißt (io mi chiamo, tu ti chiami...)",
@@ -310,5 +310,17 @@
   "it": "chiamarsi",
   "ex": "Ich heiße Emanuele.",
   "cat": "presentazioni"
+ },
+ {
+  "id": "mumpk4oj",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "wer",
+  "pl": "",
+  "ipa": "vèer",
+  "it": "chi",
+  "ex": "Wer ist das? (Chi è quello?)",
+  "cat": "domande"
  }
 ]
