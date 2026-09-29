@@ -298,5 +298,17 @@
   "it": "scusa, mi scusi (per attirare l'attenzione o chiedere perdono)",
   "ex": "Entschuldigung, wo ist der Bahnhof?",
   "cat": "conversazione"
+ },
+ {
+  "id": "mumpg4vs",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "heißen",
+  "pl": "ich heiße, du heißt, er heißt (io mi chiamo, tu ti chiami...)",
+  "ipa": "hài-ssen",
+  "it": "chiamarsi",
+  "ex": "Ich heiße Emanuele.",
+  "cat": "presentazioni"
  }
 ]
