@@ -238,5 +238,17 @@
   "it": "stazione ferroviaria",
   "ex": "Ich gehe zum Bahnhof. (Vado in stazione.)",
   "cat": "luoghi"
+ },
+ {
+  "id": "mump9dkz",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Zimmer",
+  "pl": "Zimmer",
+  "ipa": "tsìm-mer",
+  "it": "stanza, camera",
+  "ex": "Mein Zimmer ist klein, aber schön.",
+  "cat": "casa"
  }
 ]
