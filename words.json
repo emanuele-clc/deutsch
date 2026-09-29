@@ -8,8 +8,8 @@
   "it": "casa",
   "ex": "Das Haus ist groß.",
   "cat": "casa",
-  "box": 0,
-  "due": 0
+  "box": 1,
+  "due": 1790775020020
  },
  {
   "id": "a2",
@@ -109,8 +109,8 @@
  },
  {
   "id": "mumnmklz",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790775021477,
   "art": "",
   "de": "alt",
   "pl": "älter, am ältesten",
