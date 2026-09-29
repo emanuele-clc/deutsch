@@ -274,5 +274,17 @@
   "it": "acqua",
   "ex": "Ein Wasser, bitte.",
   "cat": "cibo"
+ },
+ {
+  "id": "mumpd7s7",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "Servus",
+  "pl": "sèr-vus",
+  "ipa": "",
+  "it": "ciao, salve",
+  "ex": "Servus! Wie geht's? (Ciao! Come va?)",
+  "cat": "saluti"
  }
 ]
