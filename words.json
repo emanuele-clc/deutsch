@@ -154,5 +154,17 @@
   "it": "oggi",
   "ex": "Heute habe ich viel zu tun. (Oggi ho molto da fare.)",
   "cat": "avverbi"
+ },
+ {
+  "id": "mumnq8lu",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "morgen",
+  "pl": "",
+  "ipa": "mòr-ghen",
+  "it": "domani",
+  "ex": "Morgen habe ich eine Vorlesung an der Uni. (Domani ho una lezione all'università.)",
+  "cat": "avverbi"
  }
 ]
