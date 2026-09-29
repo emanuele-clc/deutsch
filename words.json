@@ -262,5 +262,17 @@
   "it": "programmare (informatica)",
   "ex": "Ich lerne an der Uni programmieren. (Imparo a programmare all'università.)",
   "cat": "verbi"
+ },
+ {
+  "id": "mumpaxfq",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Wasser",
+  "pl": "Wässer",
+  "ipa": "vàs-ser",
+  "it": "acqua",
+  "ex": "Ein Wasser, bitte.",
+  "cat": "cibo"
  }
 ]
