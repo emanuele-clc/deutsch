@@ -97,6 +97,7 @@ async function load(){
  try{W=await(await fetch('words.json?'+Date.now())).json();cache()}catch(e){W=JSON.parse(localStorage.w||'[]')}
  render()
 }
+function local(){cache();localStorage.dirty=1;clearTimeout(timer);timer=setTimeout(push,60000);st('Ripasso salvato in locale, sincronizzo tra poco…')}
 function changed(){cache();localStorage.dirty=1;render();clearTimeout(timer);timer=setTimeout(push,1500);st('Modifiche non ancora salvate…')}
 async function push(){
  clearTimeout(timer);
@@ -105,7 +106,7 @@ async function push(){
  for(let i=0;i<2;i++){try{
   const R=await remote();merge(R.L);
   const r=await fetch(API,{method:'PUT',headers:H(),body:JSON.stringify({message:'Aggiorna parole',content:enc(JSON.stringify(W,null,1)),sha:R.sha||undefined})});
-  if(r.ok){sha=(await r.json()).content.sha;localStorage.removeItem('dirty');localStorage.removeItem('del');cache();render();st('Salvato e sincronizzato ✓');return true}
+  if(r.ok){sha=(await r.json()).content.sha;localStorage.removeItem('dirty');localStorage.removeItem('del');cache();if($('#v-rev').classList.contains('hide'))render();st('Salvato e sincronizzato ✓');return true}
   if(r.status!=409&&r.status!=422){st('Errore '+r.status+': controlla il token (Contents: Read and write sul repo deutsch)');return false}
  }catch(e){st(typeof e=='number'?'Token non valido o senza permessi ('+e+')':'Offline: salvato in locale, riprova dopo');return false}}
  st('Conflitto, riprova');return false
@@ -132,7 +133,7 @@ function nextCard(){
 $('#card').onclick=()=>{if(!cur)return;$('#grade').classList.remove('hide');
  $('#card').innerHTML=`<div class="de">${esc(rev?full(cur):cur.it)}</div><div class="ipa">[${esc(cur.ipa)}]</div>${cur.ex?`<p class="ex">${esc(cur.ex)}</p>`:''}`;speak(full(cur))};
 $('#grade').onclick=e=>{const g=e.target.dataset.g;if(g==null||!cur)return;
- cur.box=g==0?0:Math.min((cur.box||0)+(g==2?1:0),6);cur.due=Date.now()+(g==1?DAY/2:INT[cur.box]*DAY||600000);changed()};
+ cur.box=g==0?0:Math.min((cur.box||0)+(g==2?1:0),6);cur.due=Date.now()+(g==1?DAY/2:INT[cur.box]*DAY||600000);local();nextCard()};
 $('#dir').onclick=()=>{rev=!rev;$('#dir').textContent=rev?'IT → DE':'DE → IT';nextCard()};
 
 $('#list').onclick=e=>{const s=e.target.dataset.s,d=e.target.dataset.e;
@@ -147,6 +148,8 @@ $('#del').onclick=()=>{if(confirm('Eliminare questa parola?')){localStorage.del=
 $('#q').oninput=$('#fc').onchange=render;
 
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+ if(!$('#v-rev').classList.contains('hide')&&b.dataset.v!='rev'&&localStorage.dirty)push();
+ if(b.dataset.v=='dict')render();
  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x==b));
  ['dict','rev','gram','set'].forEach(v=>$('#v-'+v).classList.toggle('hide',v!=b.dataset.v))});
 $('#tok').value=tok;
@@ -156,5 +159,6 @@ $('#save').onclick=push;
 $('#exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(W,null,1)]));a.download='words.json';a.click()};
 $('#imp').onclick=()=>$('#file').click();
 $('#file').onchange=async e=>{try{W=JSON.parse(await e.target.files[0].text());changed()}catch(x){alert('File non valido')}};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&localStorage.dirty)push()});
 load();
 </script></body></html>
