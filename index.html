@@ -41,7 +41,7 @@ details{background:var(--card);border:1px solid var(--bd);border-radius:10px;pad
 </section>
 
 <section id="v-rev" class="hide">
- <div class="row"><span id="due" class="mut"></span><button class="btn" id="dir">DE → IT</button></div>
+ <div class="row"><span id="due" class="mut"></span><button class="btn" id="dir">DE → IT</button><button class="btn" id="mode">Da ripassare</button></div>
  <div class="fc" id="card"></div>
  <div class="row hide" id="grade"><button class="btn" data-g="0">Non la so</button><button class="btn" data-g="1">Quasi</button><button class="btn p" data-g="2">La so</button></div>
 </section>
@@ -83,7 +83,7 @@ const owner=location.hostname.endsWith('github.io')?location.hostname.split('.')
 const API=`https://api.github.com/repos/${owner}/${repo}/contents/words.json`;
 const H=()=>({Authorization:'Bearer '+tok,Accept:'application/vnd.github+json'});
 const DAY=864e5,INT=[0,1,3,7,16,35,90];
-let W=[],sha=null,tok=localStorage.tok||'',editing=null,cur=null,rev=false,timer;
+let W=[],sha=null,tok=localStorage.tok||'',editing=null,cur=null,rev=false,all=false,timer;
 const st=t=>$('#st').textContent=t;
 const cache=()=>localStorage.w=JSON.stringify(W);
 const dec=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));
@@ -124,16 +124,20 @@ function render(){
  nextCard()
 }
 function nextCard(){
- const d=W.filter(w=>(w.due||0)<=Date.now());
- $('#due').textContent=d.length+' da ripassare';
+ const prev=cur&&cur.id;
+ let d=all?W:W.filter(w=>(w.due||0)<=Date.now());
+ $('#due').textContent=all?W.length+' parole (libero)':d.length+' da ripassare';
+ if(d.length>1)d=d.filter(w=>w.id!=prev);
  cur=d.length?d[Math.floor(Math.random()*d.length)]:null;
  $('#grade').classList.add('hide');
- $('#card').innerHTML=cur?`<div class="de">${esc(rev?cur.it:full(cur))}</div>${rev?'':`<div class="ipa">[${esc(cur.ipa)}]</div>`}<p class="mut">tocca per girare</p>`:'<p>🎉 Tutto ripassato per oggi!</p>';
+ $('#card').innerHTML=cur?`<div class="de">${esc(rev?cur.it:full(cur))}</div>${rev?'':`<div class="ipa">[${esc(cur.ipa)}]</div>`}<p class="mut">tocca per girare</p>`:'<p>🎉 Tutto ripassato per oggi!<br><span class="mut">Tocca «Da ripassare» in alto per ripassare comunque tutte le parole.</span></p>';
 }
 $('#card').onclick=()=>{if(!cur)return;$('#grade').classList.remove('hide');
  $('#card').innerHTML=`<div class="de">${esc(rev?full(cur):cur.it)}</div><div class="ipa">[${esc(cur.ipa)}]</div>${cur.ex?`<p class="ex">${esc(cur.ex)}</p>`:''}`;speak(full(cur))};
 $('#grade').onclick=e=>{const g=e.target.dataset.g;if(g==null||!cur)return;
+ if(all&&g!=0){nextCard();return}
  cur.box=g==0?0:Math.min((cur.box||0)+(g==2?1:0),6);cur.due=Date.now()+(g==1?DAY/2:INT[cur.box]*DAY||600000);local();nextCard()};
+$('#mode').onclick=()=>{all=!all;$('#mode').textContent=all?'Tutte le parole':'Da ripassare';cur=null;nextCard()};
 $('#dir').onclick=()=>{rev=!rev;$('#dir').textContent=rev?'IT → DE':'DE → IT';nextCard()};
 
 $('#list').onclick=e=>{const s=e.target.dataset.s,d=e.target.dataset.e;
