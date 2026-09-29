@@ -94,5 +94,17 @@
   "it": "economico, a buon mercato",
   "ex": "Das Ticket ist sehr billig.",
   "cat": "aggettivi"
+ },
+ {
+  "id": "mumniu5k",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Geschäft",
+  "pl": "Geschäfte",
+  "ipa": "ghe-scèft",
+  "it": "negozio",
+  "ex": "Das Geschäft öffnet um 9 Uhr. (Il negozio apre alle 9.)",
+  "cat": "luoghi"
  }
 ]
