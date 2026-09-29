@@ -346,5 +346,17 @@
   "it": "dove",
   "ex": "Wo ist die Mensa? (Dov'è la mensa universitaria?)",
   "cat": "domande"
+ },
+ {
+  "id": "mumplmtw",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "wann",
+  "pl": "",
+  "ipa": "van",
+  "it": "quando",
+  "ex": "Wann beginnt die Vorlesung? (Quando inizia la lezione?)",
+  "cat": "domande"
  }
 ]
