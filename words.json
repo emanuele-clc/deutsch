@@ -394,5 +394,17 @@
   "it": "mangiare",
   "ex": "Was essen wir heute? (Cosa mangiamo oggi?)",
   "cat": "verbi"
+ },
+ {
+  "id": "mumry11h",
+  "box": 0,
+  "due": 0,
+  "art": "die",
+  "de": "Prüfung",
+  "pl": "Prüfungen",
+  "ipa": "prù-fung",
+  "it": "esame",
+  "ex": "Die Prüfung in Informatik ist schwer. (L'esame di informatica è difficile.)",
+  "cat": "studio"
  }
 ]
