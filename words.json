@@ -478,5 +478,17 @@
   "it": "studiare, imparare",
   "ex": "Ich muss heute für die Prüfung lernen. (Oggi devo studiare per l'esame.)",
   "cat": "verbi"
+ },
+ {
+  "id": "muo58u5d",
+  "box": 0,
+  "due": 0,
+  "art": "der",
+  "de": "Kaffee",
+  "pl": "Kaffees",
+  "ipa": "kàf-fe",
+  "it": "caffè",
+  "ex": "Ich trinke viel Kaffee, wenn ich programmiere. (Bevo molto caffè quando programmo.)",
+  "cat": "cibo"
  }
 ]
