@@ -550,5 +550,17 @@
   "it": "comprare",
   "ex": "Ich kaufe ein neues Buch. (Compro un libro nuovo.)",
   "cat": "verbi"
+ },
+ {
+  "id": "muo77939",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Bier",
+  "pl": "Biere",
+  "ipa": "bìir",
+  "it": "Birra",
+  "ex": "Ein Bier, bitte. (Una birra, per favore.)",
+  "cat": "cibo"
  }
 ]
