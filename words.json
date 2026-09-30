@@ -466,5 +466,17 @@
   "it": "studentato",
   "ex": "Das Wohnheim in Hagenberg ist sehr modern. (Lo studentato a Hagenberg è molto moderno.)",
   "cat": "luoghi"
+ },
+ {
+  "id": "muo57wos",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "lernen",
+  "pl": "du lernst, er lernt, hat gelernt",
+  "ipa": "lèr-nen",
+  "it": "studiare, imparare",
+  "ex": "Ich muss heute für die Prüfung lernen. (Oggi devo studiare per l'esame.)",
+  "cat": "verbi"
  }
 ]
