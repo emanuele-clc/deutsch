@@ -490,5 +490,17 @@
   "it": "caffè",
   "ex": "Ich trinke viel Kaffee, wenn ich programmiere. (Bevo molto caffè quando programmo.)",
   "cat": "cibo"
+ },
+ {
+  "id": "muo5bqyi",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Eiweiß",
+  "pl": "Eiweiße",
+  "ipa": "ài-vais",
+  "it": "proteina, albume d'uovo",
+  "ex": "Wie viel Gramm Eiweiß hat dieses Gericht? (Quanti grammi di proteine ha questo piatto?)",
+  "cat": "cibo"
  }
 ]
