@@ -538,5 +538,17 @@
   "it": "bicicletta",
   "ex": "Ich fahre mit dem Fahrrad zur Uni. (Vado all'università in bici.)",
   "cat": "trasporti"
+ },
+ {
+  "id": "muo768qr",
+  "box": 0,
+  "due": 0,
+  "art": "",
+  "de": "kaufen",
+  "pl": "du kaufst, er kauft, hat gekauft",
+  "ipa": "kàu-fen",
+  "it": "comprare",
+  "ex": "Ich kaufe ein neues Buch. (Compro un libro nuovo.)",
+  "cat": "verbi"
  }
 ]
