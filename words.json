@@ -514,5 +514,17 @@
   "it": "schermo, monitor",
   "ex": "Ich brauche einen zweiten Bildschirm zum Programmieren. (Mi serve un secondo schermo per programmare.)",
   "cat": "informatica"
+ },
+ {
+  "id": "muo5dayr",
+  "box": 0,
+  "due": 0,
+  "art": "der",
+  "de": "Zug",
+  "pl": "Züge",
+  "ipa": "tsùuk",
+  "it": "treno",
+  "ex": "Wann fährt der nächste Zug nach Linz? (Quando parte il prossimo treno per Linz?)",
+  "cat": "trasporti"
  }
 ]
