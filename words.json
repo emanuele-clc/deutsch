@@ -502,5 +502,17 @@
   "it": "proteina, albume d'uovo",
   "ex": "Wie viel Gramm Eiweiß hat dieses Gericht? (Quanti grammi di proteine ha questo piatto?)",
   "cat": "cibo"
+ },
+ {
+  "id": "muo5cj17",
+  "box": 0,
+  "due": 0,
+  "art": "der",
+  "de": "Bildschirm",
+  "pl": "Bildschirm",
+  "ipa": "bìld-scirm",
+  "it": "schermo, monitor",
+  "ex": "Ich brauche einen zweiten Bildschirm zum Programmieren. (Mi serve un secondo schermo per programmare.)",
+  "cat": "informatica"
  }
 ]
