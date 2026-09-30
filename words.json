@@ -442,5 +442,17 @@
   "it": "tastiera",
   "ex": "Ich brauche eine neue Tastatur für meinen Laptop. (Ho bisogno di una nuova tastiera per il mio portatile.)",
   "cat": "informatica"
+ },
+ {
+  "id": "muo55x96",
+  "box": 0,
+  "due": 0,
+  "art": "die",
+  "de": "Semmel",
+  "pl": "Semmeln",
+  "ipa": "sèm-mel",
+  "it": "panino (rotondo)",
+  "ex": "Zwei Semmeln, bitte. (Due panini, per favore.)",
+  "cat": "cibo"
  }
 ]
