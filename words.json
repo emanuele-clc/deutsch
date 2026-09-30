@@ -430,5 +430,17 @@
   "it": "sacchetto, busta",
   "ex": "Brauchen Sie ein Sackerl? (Le serve una busta?)",
   "cat": "acquisti"
+ },
+ {
+  "id": "muo54zgs",
+  "box": 0,
+  "due": 0,
+  "art": "die",
+  "de": "Tastatur",
+  "pl": "Tastaturen",
+  "ipa": "tas-ta-tùur",
+  "it": "tastiera",
+  "ex": "Ich brauche eine neue Tastatur für meinen Laptop. (Ho bisogno di una nuova tastiera per il mio portatile.)",
+  "cat": "informatica"
  }
 ]
