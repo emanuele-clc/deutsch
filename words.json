@@ -454,5 +454,17 @@
   "it": "panino (rotondo)",
   "ex": "Zwei Semmeln, bitte. (Due panini, per favore.)",
   "cat": "cibo"
+ },
+ {
+  "id": "muo56o8v",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Wohnheim",
+  "pl": "Wohnheime",
+  "ipa": "vòon-haim",
+  "it": "studentato",
+  "ex": "Das Wohnheim in Hagenberg ist sehr modern. (Lo studentato a Hagenberg è molto moderno.)",
+  "cat": "luoghi"
  }
 ]
