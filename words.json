@@ -526,5 +526,17 @@
   "it": "treno",
   "ex": "Wann fährt der nächste Zug nach Linz? (Quando parte il prossimo treno per Linz?)",
   "cat": "trasporti"
+ },
+ {
+  "id": "muo75dkt",
+  "box": 0,
+  "due": 0,
+  "art": "das",
+  "de": "Fahrrad",
+  "pl": "Fahrräder",
+  "ipa": "fàar-rad",
+  "it": "bicicletta",
+  "ex": "Ich fahre mit dem Fahrrad zur Uni. (Vado all'università in bici.)",
+  "cat": "trasporti"
  }
 ]
