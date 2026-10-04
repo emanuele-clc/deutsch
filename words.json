@@ -8,8 +8,8 @@
   "it": "casa",
   "ex": "Das Haus ist groß.",
   "cat": "casa",
-  "box": 1,
-  "due": 1790775020020
+  "box": 2,
+  "due": 1791039838728
  },
  {
   "id": "a2",
@@ -32,8 +32,8 @@
   "it": "donna, signora",
   "ex": "Die Frau wohnt in Berlin.",
   "cat": "persone",
-  "box": 1,
-  "due": 1790774891440
+  "box": 2,
+  "due": 1791039873864
  },
  {
   "id": "a4",
@@ -44,8 +44,8 @@
   "it": "abitare",
   "ex": "Ich wohne in Catania.",
   "cat": "verbi",
-  "box": 1,
-  "due": 1790774592815
+  "box": 2,
+  "due": 1791039822407
  },
  {
   "id": "a5",
@@ -61,8 +61,8 @@
  },
  {
   "id": "mumki1yx",
-  "box": 1,
-  "due": 1790774909888,
+  "box": 2,
+  "due": 1791039835659,
   "art": "",
   "de": "teuer",
   "pl": "teurer, am teuersten",
@@ -73,8 +73,8 @@
  },
  {
   "id": "mumnhd28",
-  "box": 1,
-  "due": 1790774929478,
+  "box": 2,
+  "due": 1791039819758,
   "art": "",
   "de": "billig",
   "pl": "billiger, am billigsten",
@@ -85,8 +85,8 @@
  },
  {
   "id": "mumniu5k",
-  "box": 1,
-  "due": 1790774985977,
+  "box": 2,
+  "due": 1791039879366,
   "art": "das",
   "de": "Geschäft",
   "pl": "Geschäfte",
@@ -97,8 +97,8 @@
  },
  {
   "id": "mumnl4al",
-  "box": 1,
-  "due": 1790774999687,
+  "box": 2,
+  "due": 1791039901779,
   "art": "",
   "de": "neu",
   "pl": "neuer, am neuesten",
@@ -109,8 +109,8 @@
  },
  {
   "id": "mumnmklz",
-  "box": 1,
-  "due": 1790775021477,
+  "box": 2,
+  "due": 1791039856158,
   "art": "",
   "de": "alt",
   "pl": "älter, am ältesten",
@@ -121,8 +121,8 @@
  },
  {
   "id": "mumno6w3",
-  "box": 1,
-  "due": 1790774641603,
+  "box": 2,
+  "due": 1791039846445,
   "art": "der",
   "de": "Geburtstag",
   "pl": "Geburtstage",
@@ -145,8 +145,8 @@
  },
  {
   "id": "mumnq8lu",
-  "box": 1,
-  "due": 1790774543165,
+  "box": 2,
+  "due": 1791039869609,
   "art": "",
   "de": "morgen",
   "pl": "",
@@ -157,8 +157,8 @@
  },
  {
   "id": "mumnrcy7",
-  "box": 1,
-  "due": 1790777371368,
+  "box": 2,
+  "due": 1791039925857,
   "art": "",
   "de": "wunderbar",
   "pl": "wunderbarer, am wunderbarsten",
@@ -170,7 +170,7 @@
  {
   "id": "mumntmki",
   "box": 1,
-  "due": 1790774551103,
+  "due": 1790823842260,
   "art": "",
   "de": "scharf",
   "pl": "schärfer, am schärfsten",
@@ -181,8 +181,8 @@
  },
  {
   "id": "mumnuots",
-  "box": 1,
-  "due": 1790774613731,
+  "box": 2,
+  "due": 1791039867401,
   "art": "die",
   "de": "Vorlesung",
   "pl": "Vorlesungen",
@@ -193,8 +193,8 @@
  },
  {
   "id": "mumnw2z2",
-  "box": 1,
-  "due": 1790774560697,
+  "box": 2,
+  "due": 1791039881539,
   "art": "",
   "de": "laufen",
   "pl": "du läufst, er läuft, ist gelaufen",
@@ -205,8 +205,8 @@
  },
  {
   "id": "mump7ivu",
-  "box": 1,
-  "due": 1790774835846,
+  "box": 2,
+  "due": 1791039848856,
   "art": "der",
   "de": "Supermarkt",
   "pl": "Supermärkte",
@@ -217,8 +217,8 @@
  },
  {
   "id": "mump8f7x",
-  "box": 1,
-  "due": 1790774937192,
+  "box": 2,
+  "due": 1791039912740,
   "art": "der",
   "de": "Bahnhof",
   "pl": "Bahnhöfe",
@@ -241,8 +241,8 @@
  },
  {
   "id": "mumpa7ko",
-  "box": 1,
-  "due": 1790774590623,
+  "box": 2,
+  "due": 1791039941701,
   "art": "",
   "de": "programmieren",
   "pl": "du programmierst, er programmiert, hat programmiert",
@@ -253,8 +253,8 @@
  },
  {
   "id": "mumpaxfq",
-  "box": 1,
-  "due": 1790774814034,
+  "box": 2,
+  "due": 1791039857518,
   "art": "das",
   "de": "Wasser",
   "pl": "Wässer",
@@ -265,8 +265,8 @@
  },
  {
   "id": "mumpd7s7",
-  "box": 1,
-  "due": 1790774574703,
+  "box": 2,
+  "due": 1791039937939,
   "art": "",
   "de": "Servus",
   "pl": "sèr-vus",
@@ -277,8 +277,8 @@
  },
  {
   "id": "mumpdsiv",
-  "box": 1,
-  "due": 1790774811792,
+  "box": 2,
+  "due": 1791039884364,
   "art": "",
   "de": "Danke",
   "pl": "",
@@ -289,8 +289,8 @@
  },
  {
   "id": "mumpf8mn",
-  "box": 1,
-  "due": 1790774603488,
+  "box": 2,
+  "due": 1791039811068,
   "art": "",
   "de": "Entschuldigung",
   "pl": "Entschuldigungen",
@@ -301,8 +301,8 @@
  },
  {
   "id": "mumpg4vs",
-  "box": 1,
-  "due": 1790774572135,
+  "box": 2,
+  "due": 1791039816157,
   "art": "",
   "de": "heißen",
   "pl": "ich heiße, du heißt, er heißt (io mi chiamo, tu ti chiami...)",
@@ -325,8 +325,8 @@
  },
  {
   "id": "mumpkmsh",
-  "box": 1,
-  "due": 1790774820381,
+  "box": 2,
+  "due": 1791039807179,
   "art": "",
   "de": "was",
   "pl": "",
@@ -337,8 +337,8 @@
  },
  {
   "id": "mumpl1y1",
-  "box": 1,
-  "due": 1790774977996,
+  "box": 2,
+  "due": 1791039918501,
   "art": "",
   "de": "wo",
   "pl": "",
@@ -349,8 +349,8 @@
  },
  {
   "id": "mumplmtw",
-  "box": 1,
-  "due": 1790775015015,
+  "box": 2,
+  "due": 1791039852073,
   "art": "",
   "de": "wann",
   "pl": "",
@@ -373,8 +373,8 @@
  },
  {
   "id": "mumpn00o",
-  "box": 1,
-  "due": 1790774923425,
+  "box": 2,
+  "due": 1791039934847,
   "art": "",
   "de": "sprechen",
   "pl": "du sprichst, er spricht, hat gesprochen",
@@ -409,8 +409,8 @@
  },
  {
   "id": "mumrysjk",
-  "box": 0,
-  "due": 1790747367091,
+  "box": 1,
+  "due": 1790867013948,
   "art": "",
   "de": "bezahlen",
   "pl": "du bezahlst, er bezahlt, hat bezahlt",
@@ -433,8 +433,8 @@
  },
  {
   "id": "muo54zgs",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867099578,
   "art": "die",
   "de": "Tastatur",
   "pl": "Tastaturen",
@@ -445,8 +445,8 @@
  },
  {
   "id": "muo55x96",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867110091,
   "art": "die",
   "de": "Semmel",
   "pl": "Semmeln",
@@ -457,8 +457,8 @@
  },
  {
   "id": "muo56o8v",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867088815,
   "art": "das",
   "de": "Wohnheim",
   "pl": "Wohnheime",
@@ -469,8 +469,8 @@
  },
  {
   "id": "muo57wos",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867145703,
   "art": "",
   "de": "lernen",
   "pl": "du lernst, er lernt, hat gelernt",
@@ -481,8 +481,8 @@
  },
  {
   "id": "muo58u5d",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867131890,
   "art": "der",
   "de": "Kaffee",
   "pl": "Kaffees",
@@ -493,8 +493,8 @@
  },
  {
   "id": "muo5bqyi",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867030207,
   "art": "das",
   "de": "Eiweiß",
   "pl": "Eiweiße",
@@ -505,8 +505,8 @@
  },
  {
   "id": "muo5cj17",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867151289,
   "art": "der",
   "de": "Bildschirm",
   "pl": "Bildschirm",
@@ -518,7 +518,7 @@
  {
   "id": "muo5dayr",
   "box": 0,
-  "due": 0,
+  "due": 1790781328590,
   "art": "der",
   "de": "Zug",
   "pl": "Züge",
@@ -529,8 +529,8 @@
  },
  {
   "id": "muo75dkt",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867062166,
   "art": "das",
   "de": "Fahrrad",
   "pl": "Fahrräder",
@@ -541,8 +541,8 @@
  },
  {
   "id": "muo768qr",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867092950,
   "art": "",
   "de": "kaufen",
   "pl": "du kaufst, er kauft, hat gekauft",
@@ -553,8 +553,8 @@
  },
  {
   "id": "muo77939",
-  "box": 0,
-  "due": 0,
+  "box": 1,
+  "due": 1790867130160,
   "art": "das",
   "de": "Bier",
   "pl": "Biere",
